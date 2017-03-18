@@ -4,9 +4,9 @@
 // for ios push.
 import log from 'npmlog';
 
-if (process.env.VERBOSE || process.env.VERBOSE_PARSE_SERVER_PUSH_ADAPTER) {
+//if (process.env.VERBOSE || process.env.VERBOSE_PARSE_SERVER_PUSH_ADAPTER) {
   log.level = 'verbose';
-}
+//}
 
 import ParsePushAdapter from './ParsePushAdapter';
 import GCM from './GCM';

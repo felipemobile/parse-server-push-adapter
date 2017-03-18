@@ -109,6 +109,9 @@ APNS.prototype.send = function(data, devices) {
   // Start by clustering the devices per connections
   devices.forEach((device) => {
     let qualifiedConnIndexs = chooseConns(this.conns, device);
+    log.error(LOG_PREFIX, this.conns);
+    log.error(LOG_PREFIX, device);
+
     if (qualifiedConnIndexs.length == 0) {
       log.error(LOG_PREFIX, 'no qualified connections for %s %s', device.appIdentifier, device.deviceToken);
       let promise = Promise.resolve({
